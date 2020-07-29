@@ -180,7 +180,7 @@ for (my $i = 1; $i <= $cfg->param('BASE.MINISERVERS');$i++) {
 
 
 # Title
-$template_title = $phrase->param("TXT0000") . ": Gardena";
+$template_title = $phrase->param("TXT0000") . ": Husqvarna Automower Connect";
 
 # ---------------------------------------
 # Load header and replace HTML Markup <!--$VARNAME--> with perl variable $VARNAME
