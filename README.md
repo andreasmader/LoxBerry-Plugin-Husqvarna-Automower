@@ -7,9 +7,7 @@ Das Plugin verwendet die von der mobile APP "Automower Connect" genutzten API. D
 Das PlugIn wird von mir noch weiterentwickelt und ich freue mich über Anregungen und Feedback. 
 
 ## Change-Log
-- 2020-07-28  Erstellung PlugIn v 0.1.0
-- 2020-07-29  Anpassungen in Texten v 0.1.3
-- 2020-07-29  Testrelease für automatisches Update in Loxberry v0.1.4
+- 2020-xx-xx  Erstellung PlugIn v 1.0.0
 
 ## Known-Issues
 - 
