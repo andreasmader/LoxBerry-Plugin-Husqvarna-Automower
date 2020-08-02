@@ -17,6 +17,7 @@ activitynum:
     6:  Automower in Ladestation geparkt
 
 statenum:
+
     0:  Unbekannt
     1:  N/A
     2:  Automower Pause
