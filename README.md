@@ -7,7 +7,7 @@ Das Plugin verwendet die von der mobile APP "Automower Connect" genutzten API. D
 Das PlugIn wird von mir noch weiterentwickelt und ich freue mich über Anregungen und Feedback. 
 
 ## Change-Log
-- 2020-xx-xx  Erstellung PlugIn v 1.0.0
+- 2020-08-02  Erstellung PlugIn v 1.0.0
 
 ## Known-Issues
 - 
