@@ -69,7 +69,7 @@ if ($res->status === "OK")
 { 
    LOGOK("Command sucessfully executed");
 }
-else LOGCRIT("ERROR received from Husqvarna Connect API - available  commands: 'park','stop','start3h'");
+else LOGCRIT("ERROR received from Husqvarna Connect API - available  commands: 'park','pause','start3h'");
 	
 LOGEND("Processing terminated");
 ?>
