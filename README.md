@@ -28,7 +28,8 @@ statenum:
     7:  Automower AUS
     8:  Automower gestoppt
     10: Error (übertragen wird 10+ Automower Error-Code)
-	11: Fehler - Automower ausserhalb der Begrenzung
+
+        11: Fehler - Automower ausserhalb der Begrenzung
         12: ??
         13: ??
         14: ??
