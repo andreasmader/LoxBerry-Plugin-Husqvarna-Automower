@@ -49,7 +49,7 @@ interval:
 Das PlugIn wird von mir noch weiterentwickelt und ich freue mich über Anregungen und Feedback.
 
 ## Change-Log
-- 2020-08-02  Erstellung PlugIn HAC_v1.0.0
+- 2020-08-02  Erstellung PlugIn HAC_v1.0.1
 
 ## Known-Issues
 - 
