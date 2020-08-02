@@ -11,6 +11,6 @@
 #check if file exists (-e) and is executeable (-x)
 if [ -x REPLACELBPBINDIR/husqvarnaRCVSTAT.php ]
 then
-	cd REPLACELBPHTMLDIR
+	cd REPLACELBPBINDIR
 	/usr/bin/php REPLACELBPBINDIR/husqvarnaRCVSTAT.php
 fi
