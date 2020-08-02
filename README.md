@@ -14,7 +14,7 @@ activitynum:
     3:  Automower fährt Richtung Ladestation
     4:  Laden
     5:  Automower verlässt Ladestation
-    6:  Automower in Ladestation geparkt
+    6:  Automower geparkt in Ladestation
 
 statenum:
 
