@@ -7,6 +7,7 @@ Der UDP Port kann in den PlugIn Settings gewählt werden.
 Jede Minute sendet das Plugin einen String an den Miniserver im Format {"activitynum":3,"statenum":3,"batteryPercent":93,"interval":26}
 
 activitynum:
+
     0:  Unbekannt
     1:  N/A
     2:  Mähen
@@ -14,6 +15,7 @@ activitynum:
     4:  Laden
     5:  Automower verlässt Ladestation
     6:  Automower in Ladestation geparkt
+    
 statenum:
     0:  Unbekannt
     1:  N/A
