@@ -15,7 +15,7 @@ activitynum:
     4:  Laden
     5:  Automower verlässt Ladestation
     6:  Automower in Ladestation geparkt
-    
+
 statenum:
     0:  Unbekannt
     1:  N/A
@@ -36,8 +36,10 @@ statenum:
         17: ??
         18: ??
         19: Fehler - Automower eingeschlossen
+
 batteryPercent:
     Ladezustand des Akkus (0-100%)
+    
 interval:
     Dies entspricht der Zeit seit der letzten aktiven Datenübertragunbg in Sekunden. Dieser Wert dient dazu festzustellen ob die Kommuniation mit der API ordenbtlich funktioniert (Wert im Test bei normalem Betrieb stets kleiner als 300)
 
