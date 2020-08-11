@@ -18,26 +18,109 @@ activitynum:
 
 statenum:
 
-    0:  Unbekannt
-    1:  N/A
-    2:  Automower Pause
-    3:  Automower im Betrieb
-    4:  Warten - Update läuft
-    5:  Warten - Power-Up
-    6:  Eingeschränkt
-    7:  Automower AUS
-    8:  Automower gestoppt
-    10: Error (übertragen wird 10+ Automower Error-Code)
+    0:      Unbekannt
+    1:      N/A
+    2:      Automower Pause
+    3:      Automower im Betrieb
+    4:      Warten - Update läuft
+    5:      Warten - Power-Up
+    6:      Eingeschränkt
+    7:      Automower AUS
+    8:      Automower gestoppt
+    
+    10-100: Fehler (übertragen wird 10+ Automower Error-Code)
 
-        11: Fehler - Automower ausserhalb der Begrenzung
-        12: ??
-        13: ??
-        14: ??
-        15: ??
-        16: ??
-        17: ??
-        18: ??
-        19: Fehler - Automower eingeschlossen
+        10  Unexpected error
+        11  Outside working area
+        12  No loop signal
+        13  Wrong loop signal
+        14  Loop sensor problem, front
+        15  Loop sensor problem, rear
+        16  Loop sensor problem, left
+        17  Loop sensor problem, right
+        18  Wrong PIN code
+        19  Trapped
+        20  Upside down
+        21  Low battery
+        22  Empty battery
+        23  No drive
+        24  Mower lifted
+        25  Lifted
+        26  Stuck in charging station
+        27  Charging station blocked
+        28  Collision sensor problem, rear
+        29  Collision sensor problem, front
+        30  Wheel motor blocked, right
+        31  Wheel motor blocked, left
+        32  Wheel drive problem, right
+        33  Wheel drive problem, left
+        34  Cutting system blocked
+        35  Cutting system blocked
+        36  Invalid sub-device combination
+        37  Settings restored
+        38  Memory circuit problem
+        39  Slope too steep
+        40  Charging system problem
+        41  STOP button problem
+        42  Tilt sensor problem
+        43  Mower tilted
+        44  Cutting stopped - slope too steep
+        45  Wheel motor overloaded, right
+        46  Wheel motor overloaded, left
+        47  Charging current too high
+        48  Electronic problem
+        49  Cutting motor problem
+        50  Limited cutting height range
+        51  Unexpected cutting height adj
+        52  Limited cutting height range
+        53  Cutting height problem, drive
+        54  Cutting height problem, curr
+        55  Cutting height problem, dir
+        56  Cutting height blocked
+        57  Cutting height problem
+        58  No response from charger
+        59  Ultrasonic problem
+        60  Guide 1 not found
+        61  Guide 2 not found
+        62  Guide 3 not found
+        63  GPS navigation problem
+        64  Weak GPS signal
+        65  Difficult finding home
+        66  Guide calibration accomplished
+        67  Guide calibration failed
+        68  Temporary battery problem
+        69  Temporary battery problem
+        70  Temporary battery problem
+        71  Temporary battery problem
+        72  Temporary battery problem
+        73  Temporary battery problem
+        74  Temporary battery problem
+        75  Temporary battery problem
+        76  Battery problem
+        77  Battery problem
+        78  Temporary battery problem
+        79  Alarm! Mower switched off
+        80  Alarm! Mower stopped
+        81  Alarm! Mower lifted
+        82  Alarm! Mower tilted
+        83  Alarm! Mower in motion
+        84  Alarm! Outside geofence
+        85  Connection changed
+        86  Connection NOT changed
+        87  Com board not available
+        88  Slipped - Mower has Slipped.Situation not solved with moving pattern
+        89  Invalid battery combination - Invalid combination of different battery types.
+        90  Cutting system imbalance    Warning
+        91  Safety function faulty
+        92  Wheel motor blocked, rear right
+        93  Wheel motor blocked, rear left
+        94  Wheel drive problem, rear right
+        95  Wheel drive problem, rear left
+        96  Wheel motor overloaded, rear right
+        97  Wheel motor overloaded, rear left
+        98  Angular sensor problem
+        99  Invalid system configuration
+        100 No power in charging station
 
 batteryPercent:
     Ladezustand des Akkus (0-100%)
