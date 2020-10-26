@@ -1,9 +1,15 @@
 # Loxberry Plugin: Automower Connect API
 Dieses Plugin ruft jede Minute den Status des Automowers ab und sendet die Daten über UDP an den gewählten Miniserver. Mittels virtuellem Ausgang kann der Miniserver die folgenden Befehle:
- "park" 		Schicke den Automower in die Ladestation
- "pause"		Automower am aktuellen Standort pausieren
- "start"		Starte den Automower gemäss Zeitplan
- "start3h" 		Starte den Automower und ignoriere den Zeitplan für die nächsten 3 Stunden
+ "park" 			Schicke den Automower in die Ladestation (Parken bis auf weiteres)
+ "parkuntilnextschedule"	Schicke den Automower in die Ladestation (mit Zeitplan starten)
+ "park3h"			Schicke den Automower in die Ladestation (Dauer: 3 Stunden)
+ "park6h"			Schicke den Automower in die Ladestation (Dauer: 6 Stunden)
+ "park12h"			Schicke den Automower in die Ladestation (Dauer: 12 Stunden)
+ "pause"			Automower am aktuellen Standort pausieren
+ "start"			Starte den Automower gemäss Zeitplan
+ "start3h" 			Starte den Automower und ignoriere den Zeitplan für die nächsten 3 Stunden
+ "start6h" 			Starte den Automower und ignoriere den Zeitplan für die nächsten 6 Stunden
+ "start12h" 			Starte den Automower und ignoriere den Zeitplan für die nächsten 12 Stunden
 
 Bei einer Steuerung des Automowers durch den Miniserver sollte der Zeitplan in der AMC App auf ein Minimum reduziert werden da es ansonsten zu konflikten zwischen dem Husqvarna Zeitplan und der Steuerung durch den Miniserver kommen kann...
 
