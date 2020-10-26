@@ -134,15 +134,15 @@ class husqvarna_api {
 		}
 		$json = curl_exec($session);
 		curl_close($session);
-//		throw new Exception(__('La livebox ne repond pas a la demande de cookie.', __FILE__));
-		return json_decode($json);
+        return json_decode($json);
 	}
 
-	private function get_api($page, $fields = null)
+	private function get_api($page, $fields = null, $put = null)
 	{
 		$session = curl_init();
 
 		curl_setopt($session, CURLOPT_URL, $this->url_api_track . $page);
+		if ( isset($put) ){ if ($put == true) curl_setopt($session, CURLOPT_CUSTOMREQUEST, 'PUT');}
 		curl_setopt($session, CURLOPT_HTTPHEADER, $this->get_headers($fields));
 		curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
 		if ( isset($fields) )
@@ -151,7 +151,6 @@ class husqvarna_api {
 		}
 		$json = curl_exec($session);
 		curl_close($session);
-//		throw new Exception(__('La livebox ne repond pas a la demande de cookie.', __FILE__));
 		return json_decode($json);
 	}
 
@@ -230,6 +229,13 @@ class husqvarna_api {
 											break;
 			case 'park12h':					return $this->get_api("mowers/".$mover_id."/control/park/duration/timer", array("period" => 720));
 		}
+	}
+	
+	function settings($mover_id, $data = null)
+	{
+		$result = $this->get_api("mowers/".$mover_id."/settings", array("settings" => $data), true);
+		if ($result==NULL) $result->status = "OK";
+		return $result;
 	}
 }
 ?>

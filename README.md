@@ -1,16 +1,9 @@
 # Loxberry Plugin: Automower Connect API
 Dieses Plugin ruft jede Minute den Status des Automowers ab und sendet die Daten über UDP an den gewählten Miniserver. Mittels virtuellem Ausgang kann der Miniserver die folgenden Befehle:
-
-    "park":  			Schicke den Automower in die Ladestation (Parken bis auf weiteres)
-    "parkuntilnextschedule":	Schicke den Automower in die Ladestation (mit Zeitplan starten)
-    "park3h":			Schicke den Automower in die Ladestation (Dauer: 3 Stunden)
-    "park6h":			Schicke den Automower in die Ladestation (Dauer: 6 Stunden)
-    "park12h":			Schicke den Automower in die Ladestation (Dauer: 12 Stunden)
-    "pause":			Automower am aktuellen Standort pausieren
-    "start":			Starte den Automower gemäss Zeitplan
-    "start3h":			Starte den Automower und ignoriere den Zeitplan für die nächsten 3 Stunden
-    "start6h":			Starte den Automower und ignoriere den Zeitplan für die nächsten 6 Stunden
-    "start12h":			Starte den Automower und ignoriere den Zeitplan für die nächsten 12 Stunden
+ "park" 		Schicke den Automower in die Ladestation
+ "pause"		Automower am aktuellen Standort pausieren
+ "start"		Starte den Automower gemäss Zeitplan
+ "start3h" 		Starte den Automower und ignoriere den Zeitplan für die nächsten 3 Stunden
 
 Bei einer Steuerung des Automowers durch den Miniserver sollte der Zeitplan in der AMC App auf ein Minimum reduziert werden da es ansonsten zu konflikten zwischen dem Husqvarna Zeitplan und der Steuerung durch den Miniserver kommen kann...
 
@@ -159,7 +152,7 @@ Das PlugIn wird von mir noch weiterentwickelt und ich freue mich über Anregunge
 			  Erweiterung des Plugins mit der Erfassung der Akku-Ladezeit zwischen 45% und 80% Ladezustand
 			  Implementierung der Ausgabe der nächsten Startzeit gemäss Husqvarna Zeitplanung
 			  Befehl "start" (Start mit Zeitplan) eingefügt
-- 2020-10-26  PlugIn release HAC_v1.0.4
+- 2020-10-27  PlugIn pre-release HAC_v1.0.4
 			  Befehl "start3h"  Start (Zeitplan aus für 3 Stunden)
 			  Befehl "start6h"  Start (Zeitplan aus für 6 Stunden)
 			  Befehl "start12h" Start (Zeitplan aus für 12 Stunden)
@@ -167,5 +160,7 @@ Das PlugIn wird von mir noch weiterentwickelt und ich freue mich über Anregunge
 			  Befehl "park3h"  Automower Parken (Dauer 3 Stunden)
 			  Befehl "park6h"  Automower Parken (Dauer 6 Stunden)	 
 			  Befehl "park12h" Automower Parken (Dauer 12 Stunden)
+			  Befehl "cuttingHeight:xx" implementiert (xx= integer)
+			  Befehl "ecoMode:x" implementiert (x= 0 ecoMode aus; x= 1 ecoMode ein)
 ## Known-Issues
 - 

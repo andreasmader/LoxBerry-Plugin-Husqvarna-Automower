@@ -18,10 +18,10 @@ $log = LBLog::newLog( [ "name" => "HusqvarnaLog", "package" => $lbpplugindir, "l
 // After log object is created, logging is started with LOGSTART
 // A start timestamp and other information is added automatically
 
-if ($cmd= $_GET["CMD"]) LOGSTART("Husqvarna send cmd:".$cmd." started"); 
+if ($cmd = $_GET["CMD"]) LOGSTART("Husqvarna send cmd:".$cmd." started");
 else 
 {
-	LOGCRIT("ERROR received from Husqvarna Connect API - available  commands: 'park','stop','start3h'");
+	LOGCRIT("ERROR received from Husqvarna Connect API - unnown  command");
 	LOGEND("Processing terminated");
 	exit;
 }
@@ -65,13 +65,20 @@ $mowerID= $mower->id;
 
 LOGOK("Send command '".$cmd."' to Husqvarna Connect API");
 
-$res= $session_husqvarna->control($mowerID, $cmd);
+if(strpos($cmd,"cuttingHeight:")!==false) $res = $session_husqvarna->settings($mowerID,array("cuttingHeight"=> intval(preg_replace('/[^0-9]/', '', $cmd))));
+elseif(strpos($cmd,"ecoMode:")!==false) 
+{   
+    if (intval(preg_replace('/[^0-9]/', '', $cmd))==0) $val=false; else $val=true;
+	$res = $session_husqvarna->settings($mowerID,array("ecoMode"=> $val));
+}
+else $res= $session_husqvarna->control($mowerID, $cmd);
+
 $session_husqvarna->logout();
 if ($res->status === "OK")
 { 
    LOGOK("Command sucessfully executed");
 }
-else LOGCRIT("ERROR received from Husqvarna Connect API - available  commands: 'park','pause','start3h'");
+else LOGCRIT("ERROR received from Husqvarna Connect API".json_encode ($res));
 	
 LOGEND("Processing terminated");
 ?>
