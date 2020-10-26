@@ -135,21 +135,21 @@ interval:
     Dies entspricht der Zeit seit der letzten aktiven Datenübertragunbg in Sekunden. Dieser Wert dient dazu festzustellen ob die Kommuniation mit der API ordenbtlich funktioniert (Wert im Test bei normalem Betrieb stets kleiner als 300)
 
 timestamp:
-	Zeitstempel der letzten Kommunikation mit dem Automower - gemeldet vom Plugin (korrigiert auf Loxone Zeitformat)
+    Zeitstempel der letzten Kommunikation mit dem Automower - gemeldet vom Plugin (korrigiert auf Loxone Zeitformat)
 
 nextStart:
-	Geplanter Start des Automowers gemäss Husqvarna Zeitplanung
+    Geplanter Start des Automowers gemäss Husqvarna Zeitplanung (korrigiert auf Loxone Zeitformat)
 	
 lastchargingtime:
-	Dauer der letzten ununterbrochenen Ladung des Akkus (Extrapolierte Zeit in Sekunden für Ladung von 0% auf 100%)
+    Dauer der letzten ununterbrochenen Ladung des Akkus in Sekunden (Extrapolierte Zeit für Ladung von 0% auf 100%)
 
 ## Feedback und Diskussion
 Das PlugIn wird von mir noch weiterentwickelt und ich freue mich über Anregungen und Feedback.
 
 ## Change-Log
 - 2020-08-02  Erstellung PlugIn HAC_v1.0.2
-- 2020-10-xx  PlugIn HAC_v1.0.3
-			  Erweiterung des Plugins mit der Erfassung der Akku-Ladezeit zwischen 45% und 80% Ladezustand
+- 2020-10-26  PlugIn HAC_v1.0.3
+			  Ermittlung der Akku-Ladezeit zwischen 45% und 80% Ladezustand
 			  Implementierung der Ausgabe der nächsten Startzeit gemäss Husqvarna Zeitplanung
 			  Befehl "start" (Start mit Zeitplan) eingefügt
 
