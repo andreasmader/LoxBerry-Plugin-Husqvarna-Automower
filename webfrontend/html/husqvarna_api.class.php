@@ -207,17 +207,28 @@ class husqvarna_api {
 		
 		return $this->get_api("mowers/".$mover_id."/geofence");
 	}
-
+	
 	function control($mover_id, $command)
 	{
-		if ( in_array($command, array('park', 'pause', 'start') ) )
+		switch ($command)
 		{
-			//echo"DEBUG CM2D:".$command;
-			return $this->get_api("mowers/".$mover_id."/control/".$command,array("period" => 180));
-		}
-		if ( in_array($command, array('start3h') ) )
-		{
-			return $this->get_api("mowers/".$mover_id."/control/start/override/period", array("period" => 180));
+			case 'park' :
+			case 'pause':
+			case 'start': 					return $this->get_api("mowers/".$mover_id."/control/".$command, array("period" => 180));
+			              					break;
+			case 'start3h':					return $this->get_api("mowers/".$mover_id."/control/start/override/period", array("period" => 180));
+			              					break;
+			case 'start6h':					return $this->get_api("mowers/".$mover_id."/control/start/override/period", array("period" => 360));
+			              					break;
+			case 'start12h':				return $this->get_api("mowers/".$mover_id."/control/start/override/period", array("period" => 720));
+			              					break;
+			case 'parkuntilnextschedule':	return $this->get_api("mowers/".$mover_id."/control/park/duration/timer", array("period" => 0));
+			              					break;
+			case 'park3h':					return $this->get_api("mowers/".$mover_id."/control/park/duration/timer", array("period" => 180));
+											break;
+			case 'park6h':					return $this->get_api("mowers/".$mover_id."/control/park/duration/timer", array("period" => 360));
+											break;
+			case 'park12h':					return $this->get_api("mowers/".$mover_id."/control/park/duration/timer", array("period" => 720));
 		}
 	}
 }
