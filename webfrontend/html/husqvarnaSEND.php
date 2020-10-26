@@ -3,8 +3,8 @@
 require_once "loxberry_system.php";
 require_once "loxberry_log.php";
 require_once "Config/Lite.php";
-require_once "husqvarna_api.class.php";
-require_once "functions.inc.php";
+require_once "$lbphtmldir/husqvarna_api.class.php";
+require_once "$lbphtmldir/functions.inc.php";
 
 $miniserverIP = "";
 $log = Null;
@@ -18,7 +18,7 @@ $log = LBLog::newLog( [ "name" => "HusqvarnaLog", "package" => $lbpplugindir, "l
 // After log object is created, logging is started with LOGSTART
 // A start timestamp and other information is added automatically
 
-if ($cmd= $_GET["CMD"]) LOGSTART("Husqvarna sendcmd started"); 
+if ($cmd= $_GET["CMD"]) LOGSTART("Husqvarna send cmd:".$cmd." started"); 
 else 
 {
 	LOGCRIT("ERROR received from Husqvarna Connect API - available  commands: 'park','stop','start3h'");
@@ -48,6 +48,8 @@ if ($husqvarnaCfg->get("HUSQVARNA","ENABLED")){
 $msArray = LBSystem::get_miniservers();
 $msID = $husqvarnaCfg->get("HUSQVARNA","MINISERVER");
 $miniserverIP = $msArray[$msID]['IPAddress'];
+
+//LOGOK("Data USER:".$husqvarnaCfg->get("HUSQVARNA","USERNAME")." PW:".$husqvarnaCfg->get("HUSQVARNA","PASSWORD"));
 
 //Neues Husqvarna Objekt anlegen. Username und Passwort werden aus cfg Datei gelesen.
 $session_husqvarna = new husqvarna_api();

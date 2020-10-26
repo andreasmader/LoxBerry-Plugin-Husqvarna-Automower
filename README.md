@@ -1,10 +1,16 @@
 # Loxberry Plugin: Automower Connect API
-Dieses Plugin ruft jede Minute den Status des Automowers ab und sendet die Daten über UDP an den gewählten Miniserver. Mittels virtuellem Ausgang kann der Miniserver die Befehle "park", "pause" und "start3h" an den Automower senden. Bei einer Steuerung des Automowers durch den Miniserver sollte der Zeitplan in der AMC App auf ein Minimum reduziert werden da es ansonsten zu konflikten zwischen dem Husqvarna Zeitplan und der Steuerung durch den Miniserver kommen kann...
+Dieses Plugin ruft jede Minute den Status des Automowers ab und sendet die Daten über UDP an den gewählten Miniserver. Mittels virtuellem Ausgang kann der Miniserver die folgenden Befehle:
+ "park" 		Schicke den Automower in die Ladestation
+ "pause"		Automower am aktuellen Standort pausieren
+ "start"		Starte den Automower gemäss Zeitplan
+ "start3h" 		Starte den Automower und ignoriere den Zeitplan für die nächsten 3 Stunden
+
+Bei einer Steuerung des Automowers durch den Miniserver sollte der Zeitplan in der AMC App auf ein Minimum reduziert werden da es ansonsten zu konflikten zwischen dem Husqvarna Zeitplan und der Steuerung durch den Miniserver kommen kann...
 
 Das Plugin verwendet die von der mobile APP "Automower Connect" genutzten API. Da diese API nicht offiziell dokumentiert ist kann Husqvarna an dieser API jederzeit Änderungen vornehmen die zu Funktionsstörungen des Plugins führen könnten.
 
 Der UDP Port kann in den PlugIn Settings gewählt werden.
-Jede Minute sendet das Plugin einen String an den Miniserver im Format {"activitynum":3,"statenum":3,"batteryPercent":93,"interval":26}
+Jede Minute sendet das Plugin einen String an den Miniserver im Format {"activitynum":3,"statenum":3,"batteryPercent":93,"interval":26, "timestamp":369332293,"nextStart":369401455,"lastchargingtime":2500}
 
 activitynum:
 
@@ -26,7 +32,7 @@ statenum:
     5:      Warten - Power-Up
     6:      Eingeschränkt
     7:      Automower AUS
-    8:      Automower gestoppt
+    8:      Automower gestoppt - Manueller Eingriff nötig
     
     10-100: Fehler (übertragen wird 10+ Automower Error-Code)
 
@@ -128,11 +134,24 @@ batteryPercent:
 interval:
     Dies entspricht der Zeit seit der letzten aktiven Datenübertragunbg in Sekunden. Dieser Wert dient dazu festzustellen ob die Kommuniation mit der API ordenbtlich funktioniert (Wert im Test bei normalem Betrieb stets kleiner als 300)
 
+timestamp:
+	Zeitstempel der letzten Kommunikation mit dem Automower - gemeldet vom Plugin (korrigiert auf Loxone Zeitformat)
+
+nextStart:
+	Geplanter Start des Automowers gemäss Husqvarna Zeitplanung
+	
+lastchargingtime:
+	Dauer der letzten ununterbrochenen Ladung des Akkus (Extrapolierte Zeit in Sekunden für Ladung von 0% auf 100%)
+
 ## Feedback und Diskussion
 Das PlugIn wird von mir noch weiterentwickelt und ich freue mich über Anregungen und Feedback.
 
 ## Change-Log
 - 2020-08-02  Erstellung PlugIn HAC_v1.0.2
+- 2020-10-xx  PlugIn HAC_v1.0.3
+			  Erweiterung des Plugins mit der Erfassung der Akku-Ladezeit zwischen 45% und 80% Ladezustand
+			  Implementierung der Ausgabe der nächsten Startzeit gemäss Husqvarna Zeitplanung
+			  Befehl "start" (Start mit Zeitplan) eingefügt
 
 ## Known-Issues
 - 

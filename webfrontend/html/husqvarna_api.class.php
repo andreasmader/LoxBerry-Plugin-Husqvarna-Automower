@@ -210,7 +210,7 @@ class husqvarna_api {
 
 	function control($mover_id, $command)
 	{
-		if ( in_array($command, array('park', 'pause') ) )
+		if ( in_array($command, array('park', 'pause', 'start') ) )
 		{
 			//echo"DEBUG CM2D:".$command;
 			return $this->get_api("mowers/".$mover_id."/control/".$command,array("period" => 180));
