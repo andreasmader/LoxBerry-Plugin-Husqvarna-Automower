@@ -1,5 +1,7 @@
 # Loxberry Plugin: Automower Connect API
 Dieses Plugin ruft jede Minute den Status des Automowers ab und sendet die Daten über UDP an den gewählten Miniserver. Mittels virtuellem Ausgang kann der Miniserver die folgenden Befehle:
+
+    "park":  Schicke den Automower in die Ladestation (Parken bis auf weiteres)
  "park" 			Schicke den Automower in die Ladestation (Parken bis auf weiteres)
  "parkuntilnextschedule"	Schicke den Automower in die Ladestation (mit Zeitplan starten)
  "park3h"			Schicke den Automower in die Ladestation (Dauer: 3 Stunden)
