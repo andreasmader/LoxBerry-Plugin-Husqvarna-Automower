@@ -12,7 +12,7 @@ Dieses Plugin ruft jede Minute den Status des Automowers ab und sendet die Daten
     "park6h":                Schicke den Automower in die Ladestation (Dauer 6 Stunden)
     "park12h":               Schicke den Automower in die Ladestation (Dauer 12 Stunden)
     "cuttingHeight:xx":      Schnitthöhe auf xx einstellen (xx= integer)
-    "ecoMode:x":             x= 0 ecoMode ausschalten; x= 1 ecoMode einschalten
+    "ecoMode:x":             x=0 ecoMode ausschalten; x=1 ecoMode einschalten
 
 Bei einer Steuerung des Automowers durch den Miniserver sollte der Zeitplan in der AMC App auf ein Minimum reduziert werden da es ansonsten zu konflikten zwischen dem Husqvarna Zeitplan und der Steuerung durch den Miniserver kommen kann...
 
