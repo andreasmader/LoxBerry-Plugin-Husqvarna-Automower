@@ -158,7 +158,7 @@ Das PlugIn wird von mir noch weiterentwickelt und ich freue mich über Anregunge
 			  Erweiterung des Plugins mit der Erfassung der Akku-Ladezeit zwischen 45% und 80% Ladezustand
 			  Implementierung der Ausgabe der nächsten Startzeit gemäss Husqvarna Zeitplanung
 			  Befehl "start" (Start mit Zeitplan) eingefügt
-- 2020-10-26  PlugIn release HAC_v1.0.4
+- 2020-10-xx  PlugIn release HAC_v1.0.4
 			  Befehl "start3h"  Start (Zeitplan aus für 3 Stunden)
 			  Befehl "start6h"  Start (Zeitplan aus für 6 Stunden)
 			  Befehl "start12h" Start (Zeitplan aus für 12 Stunden)
